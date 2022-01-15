@@ -11,12 +11,13 @@
             //DECLARATIONS
             let totalAmmountDue = 100
             //INPUT - get discount ammount. 
-            let discount = document.getElementById('discount').value;
+            let discount = document.getElementById(discount).value;
             //PROCESSING - subtract discount from 100.
-            totalAmmountDue = ('totalAmmountDue - discount')
+            totalAmmountDue = (totalAmmountDue - discount)
             //OUTPUT
-            document.querySelector('#totalAmmountDue').innerHTML = totalAmmountDue;
-        }
+            document.querySelector('#totalAmmountDue').innerHTML = totalAmmountDue: ${totalAmmountDue}
+        };
+
     </script>
 </head>
 
@@ -31,7 +32,8 @@
     <input type="text" id="year">
     <label for="discount">Discount Amount:</label>
     <input type="number" id="discount">
-    <button onclick="totalAmmountDue()">Total Ammount Due</button>
+    <div class="processing"><button onclick="totalAmmountDue()">Total Ammount Due</button></div>
+    <p id="totalAmmountDue"></p>
     <hr>
     </div>
 </body>
