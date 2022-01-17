@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>Vehicle Registration</h1>
     <title>Vehicle Registration</title>
+    <link rel="stylesheet" href="css/vehicleregistration">
     <script>
         function getTotal() {
             //DECLARATIONS
-            let totalAmmountDue = 100
+            let totalAmmountDue = 100;
             //INPUT - get discount ammount. 
-            let discount = document.getElementById(discount).value;
+            let discount = document.getElementById("discount").value;
             //PROCESSING - subtract discount from 100.
-            totalAmmountDue = (totalAmmountDue - discount)
+            totalAmmountDue = (totalAmmountDue - discount);
             //OUTPUT
-            document.querySelector('#totalAmmountDue').innerHTML = totalAmmountDue: ${totalAmmountDue}
-        };
-
+            document.querySelector('#totalAmmountDue').innerHTML = `Total Ammount Due: $${totalAmmountDue.toFixed(2)}`;
+        }
     </script>
 </head>
 
 <body>
+    <h1>Vehicle Registration</h1>
     <label for="fullname">Owner Full Name: </label>
     <input type="text" id="fullname">
     <label for="make">Vehicle Make: </label>
@@ -32,7 +32,7 @@
     <input type="text" id="year">
     <label for="discount">Discount Amount:</label>
     <input type="number" id="discount">
-    <div class="processing"><button onclick="totalAmmountDue()">Total Ammount Due</button></div>
+    <div class="processing"><button onclick="getTotal()">Total Ammount Due</button></div>
     <p id="totalAmmountDue"></p>
     <hr>
     </div>
