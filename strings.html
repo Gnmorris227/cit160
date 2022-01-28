@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strings</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/strings.css">
+    <script>
+        document.querySelector('#copyright').textContent = new Date().getFullYear();
+        function myfunction() {
+            document.querySelector('#firstname').innerHTML = firstname
+            document.querySelector('#fruit').innerHTML = fruit
+            document.querySelector('#animal1').innerHTML = animal1
+            document.querySelector('#animal2').innerHTML = animal2
+        }
+        let storyTime = `And it came to pass that the people of ${firstname} did till the land, and raise all manner of
+            ${fruit}, and flocks of herds, and flocks of all manner of ${animal1}, of every kind, and ${animal2}`.
+
+    </script>
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <h1>Scripture Story Build</h1>
+            <h2>G Nathan Morris</h2>
+        </header>
+        <main>
+            <h3>Information</h3>
+            <label class="heading">Provide a first name: <input type="text" id="firstname" placeholder="Sarah"></label>
+            <label class="heading">Name a fruit: <input type="text" id="fruit" placeholder="apple"></label>
+            <label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
+            <label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
+
+            <div class="process"><button onclick="storyTime">Build Story</button>
+            </div>
+            <p id="storyTime"></p>
+
+        </main>
+        <footer>
+            &copy;<span id="copyright"></span> &bull; G Nathan Morris &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </main>
 </body>
+
 </html>
