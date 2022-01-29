@@ -8,16 +8,16 @@
     <title>Strings</title>
     <link rel="stylesheet" href="css/strings.css">
     <script>
-        document.querySelector('#copyright').textContent = new Date().getFullYear();
-        function myfunction() {
-            document.querySelector('#firstname').innerHTML = firstname
-            document.querySelector('#fruit').innerHTML = fruit
-            document.querySelector('#animal1').innerHTML = animal1
-            document.querySelector('#animal2').innerHTML = animal2
+        function myFunction() {
+            let firstname = document.querySelector('#firstname').value;
+            let fruit = document.querySelector('#fruit').value;
+            let animal1 = document.querySelector('#animal1').value;
+            let animal2 = document.querySelector('#animal2').value;
+           
+            let storyTime = `And it came to pass that the people of ${firstname} did till the land, and raise all manner of
+            ${fruit}, and flocks of herds, and flocks of all manner of ${animal1}, of every kind, and ${animal2}`;
+            document.querySelector('#storyTime').innerHTML = storyTime;
         }
-        let storyTime = `And it came to pass that the people of ${firstname} did till the land, and raise all manner of
-            ${fruit}, and flocks of herds, and flocks of all manner of ${animal1}, of every kind, and ${animal2}`.
-
     </script>
 </head>
 
@@ -34,8 +34,7 @@
             <label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
             <label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
 
-            <div class="process"><button onclick="storyTime">Build Story</button>
-            </div>
+            <div class="process"><button onclick="myFunction()">Build Story</button></div>
             <p id="storyTime"></p>
 
         </main>
