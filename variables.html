@@ -9,13 +9,13 @@
     <script>
         function getTotal() {
             //DECLARATIONS
-            let totalAmmountDue = 100;
+            let totalAmountDue = 100;
             //INPUT - get discount ammount. 
             let discount = document.getElementById("discount").value;
             //PROCESSING - subtract discount from 100.
-            totalAmmountDue = (totalAmmountDue - discount);
+            totalAmountDue = (totalAmmountDue - discount);
             //OUTPUT
-            document.querySelector('#totalAmmountDue').innerHTML = `Total Ammount Due: $${totalAmmountDue.toFixed(2)}`;
+            document.querySelector('#totalAmountDue').innerHTML = `Total Amount Due: $${totalAmmountDue.toFixed(2)}`;
         }
     </script>
 </head>
@@ -32,8 +32,8 @@
     <input type="text" id="year">
     <label for="discount">Discount Amount:</label>
     <input type="number" id="discount">
-    <div class="processing"><button onclick="getTotal">Total Ammount Due</button></div>
-    <p id="totalAmmountDue"></p>
+    <div class="processing"><button onclick="getTotal">Total Amount Due</button></div>
+    <p id="totalAmountDue"></p>
     <hr>
     </div>
 </body>

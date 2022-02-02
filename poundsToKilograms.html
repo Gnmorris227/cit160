@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <script>
+        function weightconversion() {
+            //Input - take submitted weight and plug it into the function
+            let pounds = document.querySelector('#pounds').value;
+            pounds = parseFloat(pounds);
+
+            //Processing - convert to Kilo by multiplying pounds by 0.453592
+            let kilo = pounds * 0.453592
+
+            //Output - show ammount in placeholder
+            document.querySelector('#output').textContent = `${kilo.toFixed(1)} Kilograms`;
+        }
+    </script>
+</head>
+
+<body>
+<h1>Weight Conversion</h1>
+<label for="pounds">Weight in Pounds: </label>
+<input type="text" id="pounds">
+<button onclick= "weightconversion()">Calculate Weight</button>
+<p id="output"></p>
+</body>
+
+</html>
