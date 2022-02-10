@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <script>
+        function volumemeasured() {
+            //Input - take submitted radius and height
+            let radius = document.querySelector('#radius').value;
+            radius = parseFloat(radius);
+            let height = document.querySelector('#height').value;
+            height = parseFloat(height);
+
+            //Processing - calculate volume
+           let volume = Math.PI * Math.pow(radius, 2) * height
+
+            //Output - show ammount in placeholder
+            document.querySelector('#output').textContent = `${volume.toFixed(0)} total`;
+        }
+    </script>
+</head>
+
+<body>
+<h1>Total Volume</h1>
+<label for="radius">Total Radius: </label>
+<input type="text" id="radius">
+<label for="height">Total height: </label>
+<input type="text" id="height">
+<button onclick= "volumemeasured()">Calculate volume</button>
+<p id="output"></p>
+</body>
+
+</html>

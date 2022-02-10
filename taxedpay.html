@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function totalpay () {
+            //input State inputs and pull them from page
+            let reg = document.querySelector('#reg').value;
+            let over = document.querySelector('#over').value
+            let tax = .15
+            //processing
+            let gross = tax * ((15 * reg) + (22.50 * over))
+            let total = (15 * reg) + (22.50 * over) - gross
+            //output
+            document.querySelector('#output').textContent = `$${total.toFixed(2)} Dollars`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculated Pay</h1>
+    <label for="reg">Total regular hours here</label>
+    <label for="over">Overtime hours here</label>
+    <input type="text" id="reg">
+    <input type="text" id="over">
+    <button onclick="totalpay()">Calculate money owed</button>
+    <p id="output"></p>
+</body>
+
+</html>
