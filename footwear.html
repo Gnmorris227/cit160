@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear</title>
+
+</head>
+
+<body>
+    <h1>footwear</h1>
+    <select id="conditions">
+        <option value="" selected disabled> Select Weather </option>
+        <option value="hot"> Hot </option>
+        <option value="rain"> Rain </option>
+        <option value="snow"> Snow </option>
+        <option value="unknown"> Unknown </option>
+       
+        <select id="message">
+            <hr>
+
+            <button onclick="properFootwear()">Proper Footwear</button>
+            <p id="message"></p>
+
+            <script>
+                function properFootwear() {
+                    // input - Declare variable names
+                    let conditions = document.querySelector('#conditions').value;
+
+                    // processing - set up the answer key for the if statements
+                    let message = "";
+                    if (conditions == "hot") {
+                        message = "Sandals";
+                    } else if (conditions == "rain") {
+                        message = "Galoshes"
+                    } else if (conditions == "snow") {
+                        message = "Boots"
+                    } else if (conditions == "unknown") {
+                        message = "Shoes"
+                    }
+
+                    // output - display answer to the user 
+                    document.querySelector('#message').textContent = message;
+                }
+            </script>
+
+</body>
+
+</html>
