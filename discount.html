@@ -11,33 +11,37 @@
     </header>
     <main>
         <label><button onclick="discountRate()">Calculate total</button></label>
+        <input type="float" id="sub">
         <hr>
         <p id="message"></p>
     </main>
-    
+
     <script>
         function discountRate() {
+            // input
             let subTotal = document.querySelector('#sub').value;
             const now = new Date();
             const theDay = now.getDay();
             let gTotal = 0;
-            let newTotal = 0;
-            if (subTotal >= 50 && (theDay === 2 || theDay === 3)) {
-                newTotal = subTotal - (subTotal * .1);
-                gTotal = newTotal + (newTotal * .06);
+
+            // processing
+            if (subTotal > 50 && (theDay === 2 || theDay === 3)) {
+                gTotal = (subTotal - (subTotal * .1)) * 1.06;
             } else {
-                gTotal = subTotal + (subTotal * .06);
+                gTotal = subTotal * 1.06;
             }
-            document.querySelector('#message').textContent = (gTotal * .1).toFixed(2);
+
+            // output
+            document.querySelector('#message').textContent = gTotal.toFixed(2);
         }
 
-         
+
     </script>
-    <input type="number" id="sub">
+   
     <footer>
         &copy;2022 &bull; G Nathan Morris &bull; BYU-Idaho &bull; CIT 160
     </footer>
-    
+
 
 
 </body>
