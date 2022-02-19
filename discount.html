@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <header>
+        <h1>Week 7 Discount</h1>
+        <title>Discount</title>
+    </header>
+    <main>
+        <label><button onclick="discountRate()">Calculate total</button></label>
+        <hr>
+        <p id="message"></p>
+    </main>
+    
+    <script>
+        function discountRate() {
+            let subTotal = document.querySelector('#sub').value;
+            const now = new Date();
+            const theDay = now.getDay();
+            let gTotal = 0;
+            let newTotal = 0;
+            if (subTotal >= 50 && (theDay === 2 || theDay === 3)) {
+                newTotal = subTotal - (subTotal * .1);
+                gTotal = newTotal + (newTotal * .06);
+            } else {
+                gTotal = subTotal + (subTotal * .06);
+            }
+            document.querySelector('#message').textContent = (gTotal * .1).toFixed(2);
+        }
+
+         
+    </script>
+    <input type="number" id="sub">
+    <footer>
+        &copy;2022 &bull; G Nathan Morris &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+
+
+</body>
+
+</html>
