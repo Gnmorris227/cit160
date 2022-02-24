@@ -9,27 +9,25 @@
 </head>
 
 <body>
-    <h1>randomList</h1>
+    <h1>Random List</h1>
+    <hr>
     <label>Random Number:</label>
     <button onclick="random()">Click Me </button>
-    <div id="ran"></div>
+    <p id="ran"></p>
 
     <script>
         function random() {
-            let list = "";
-            let max = 50;
-            for(let n = 1; <= n max; n++) {
-                
-                Math.floor.getRandom();
-
-
-                document.querySelector('#n').textContent = message;
+            let list = '';
+            const MAX = 50
+            let math = Math.floor(Math.random() * MAX);
+            for (let n = 1; n <= math; n++) {
+                list += `Item: ${n}`
             }
-
+            document.querySelector('#ran').textContent = list;
         }
-    
-    
-    
+
+
+
     </script>
 </body>
 
