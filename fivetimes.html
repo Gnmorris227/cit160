@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Times</title>
+</head>
+
+<body>
+    <h1>W09 Assignment</h1>
+    <hr>
+    <label><button onclick="fiveTimes()">Click Me </button></label>
+    <p id="five"></p>
+
+    <script>
+
+        function fiveTimes() {
+            let output = '';
+            let i = 1;
+            let total = 5;
+            const sinco = 5;
+            while (i <= 12) {
+                output += `5 x ${i} = ` + total + `<br>`;
+                i++;
+                total = (sinco * i);
+            }
+
+
+            document.getElementById('five').innerHTML = output;
+
+
+        }
+    </script>
+    <footer>
+        &copy;2022 &bull; G Nathan Morris &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+</body>
+
+</html>
