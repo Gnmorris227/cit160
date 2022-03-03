@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the Power</title>
+</head>
+
+<body>
+    <h1>W09 Test</h1>
+    <hr>
+    <label><button onclick="powermode()">Generate Exponents</button></label>
+    <p id="power"></p>
+
+    <script>
+
+        function powermode() {
+            let output = 1;
+            let i = 0;
+            let total = "";
+            while (i < 31) {
+                output = output * 2;
+                total += output + ', '
+                i++;
+                
+
+                document.getElementById('power').innerHTML = total;
+
+            }
+        }
+    </script>
+
+    <footer>
+        &copy;2022 &bull; G Nathan Morris &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+</body>
+
+</html>
