@@ -18,16 +18,15 @@
     <p id="chilly"></p>
 
     <script>
-        function doInputOutput(t, s, f) {
-            t = document.querySelector('#output1').value;
-            s = document.querySelector('#output2').value;
-            f = windChill(s, t);
-            if(s >= 3 && t >= 50) {
-                message = f;
+        function doInputOutput() {
+            let t = parseFloat(document.querySelector('#output1').value);
+            let s = parseFloat(document.querySelector('#output2').value);
+            if (s >= 3 && t <= 50) {
+                let f = windChill(s, t);
+                document.querySelector('#chilly').innerHTML = f;
             } else {
-                message = "Sorry, Not applicable";
+                document.querySelector('#chilly').innerHTML = "";
             }
-            document.querySelector('#chilly').innerHTML = message.toFixed(2);
         }
         function windChill(s, t) {
             let f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t * Math.pow(s, 0.16);
