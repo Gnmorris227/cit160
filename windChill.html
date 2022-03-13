@@ -23,7 +23,7 @@
             let s = parseFloat(document.querySelector('#output2').value);
             if (s >= 3 && t <= 50) {
                 let f = windChill(s, t);
-                document.querySelector('#chilly').innerHTML = f;
+                document.querySelector('#chilly').innerHTML = f.toFixed(2);
             } else {
                 document.querySelector('#chilly').innerHTML = " ";
             }
