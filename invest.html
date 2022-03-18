@@ -25,12 +25,12 @@
             let a = parseFloat(document.querySelector('#output1').value);
             let n = parseFloat(document.querySelector('#output2').value) * p;
             let r = parseFloat(document.querySelector('#output3').value) / p;
-            document.getElementById("invest").innerHTML = invest;
-            invest = computeFutureValue();
+            invest = computeFutureValue(a, n, r);
+            document.getElementById("invest").innerHTML = invest.toFixed(2);
         }
         function computeFutureValue(a, n, r) {
-            let f = total;
-            total = a * Math.pow(1 + r);
+            let f = 0;
+            f = a * Math.pow((1 + r), n);
             return f;
         }
 
