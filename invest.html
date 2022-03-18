@@ -14,23 +14,24 @@
     <h2><label class="heading">Principal <input type="number" id="output1"></label></h2>
     <h2><label class="heading">Years <input type="number" id="output2"></label></h2>
     <h2><label class="heading">Annual Rate <input type="number" id="output3"></label></h2>
+    <h2><label class="heading">Periods Per Year <input type="number" id="output4"></label></h2>
     <hr>
     <label><button onclick="doFV()"> Calculate </button></label>
     <p id="invest"></p>
 
     <script>
         function doFV() {
-            let p = 12;
             let invest = 0;
             let a = parseFloat(document.querySelector('#output1').value);
-            let n = parseFloat(document.querySelector('#output2').value) * p;
-            let r = parseFloat(document.querySelector('#output3').value) / p;
-            invest = computeFutureValue(a, n, r);
+            let n = parseFloat(document.querySelector('#output2').value);
+            let r = parseFloat(document.querySelector('#output3').value);
+            let p = parseFloat(document.querySelector('#output4').value);
+            invest = computeFutureValue(a, n, r, p);
             document.getElementById("invest").innerHTML = invest.toFixed(2);
         }
-        function computeFutureValue(a, n, r) {
+        function computeFutureValue(a, n, r, p) {
             let f = 0;
-            f = a * Math.pow((1 + r), n);
+            f = a * Math.pow((1 + (r / p)), (n * p));
             return f;
         }
 
