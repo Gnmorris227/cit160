@@ -31,28 +31,30 @@
             // Test the getMiddle function by calling it two times.
             let mid1 = getMiddle(list1);
             let mid2 = getMiddle(list2);
+        }
+        
+        function addEnds(list) {
+            let sum = list[0] + (list[list.length - 1]);
+            return sum;
+        }
 
-            function addEnds(list) {
-                let sum = list[0] + (list[list.length - 1]);
-               return sum;            }
-
-            function getMiddle(list) {
-            if (list.length % 2 === 0){
-               mid = (list[list.length / 2] + list[list.length / 2 - 1]) / 2;
+        function getMiddle(list) {
+            if (list.length % 2 === 0) {
+                mid = (list[list.length / 2] + list[list.length / 2 - 1]) / 2;
                 return mid;
             } else {
                 return list[(list.length - 1) / 2];
             }
-            }
-
-            // Build a string to display to the user.
-            let output = `Sum 1: ${sum1}<br> Sum 2: ${sum2}<br>Middle 1: ${mid1}<br>Middle 2: ${mid2}`;
-
-
-            // Display the output string for the user to see.
-            document.getElementById('numbers').innerHTML = output;
-
         }
+
+        // Build a string to display to the user.
+        let output = `Sum 1: ${sum1}<br> Sum 2: ${sum2}<br>Middle 1: ${mid1}<br>Middle 2: ${mid2}`;
+
+
+        // Display the output string for the user to see.
+        document.getElementById('numbers').innerHTML = output;
+
+
     </script>
 </body>
 
